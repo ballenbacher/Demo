@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rates</title>
+    <script>
+        function CBR_XML_Daily_Ru(rates) {          
+          var USDrate = rates.Valute.USD.Value.toFixed(4).replace('.', ',');
+          var USD = document.getElementById('USD');
+          USD.innerHTML = USD.innerHTML.replace('00,0000', USDrate);
+          var AZNrate = rates.Valute.AZN.Value.toFixed(4).replace('.', ',');
+          var AZN = document.getElementById('AZN');
+          AZN.innerHTML = AZN.innerHTML.replace('00,0000', AZNrate);          
+        }
+    </script>
+    <link rel="dns-prefetch" href="https://www.cbr-xml-daily.ru/" />
+    <script src="//www.cbr-xml-daily.ru/daily_jsonp.js" async></script>
+</head>
+<body onload="CBR_XML_Daily_Ru(rates);">
+    <button style="width: 200px; text-align: center;"><a href="index1.html" style="text-decoration:none;">ДОМ</a></button><br />
+    <h1>Rates</h1>
+    <div id="USD">Доллар США — 00,0000 руб.</div>
+    <div id="AZN">Азербайджанский манат — 00,0000 руб.</div>
+</body>
+</html>

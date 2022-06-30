@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+			Demo 01
+		</title>
+	
+	<style>
+		h1 {
+		color:#cdbb33;
+		background-color:#30182b;
+		}
+	</style>
+	
+	<script>
+		function sayHello() {
+			//alert("Hello world!");
+			document.getElementById("hdr2").innerText="Hello world!";
+			document.getElementById("hdr2").style.color="#FFFFFF";
+		}	
+		function sayBello() {
+			//alert("Hello world!");
+			document.getElementById("hdr2").innerText="About something";
+			document.getElementById("hdr2").style.color="#CDBB33";
+		}	
+		function saySay() {
+			document.getElementById('player').play()
+		}
+	</script>
+	
+	</head>
+	
+	<body>
+		<button style="width: 200px; text-align: center;"><a href="index1.html" style="text-decoration:none;">ДОМ</a></button><br />
+		<h1>
+			<span>Just HTML!!!</span>
+		</h1>
+		<button onclick="sayHello();">Click me!</button>
+		<p>jdskdjkjjsdj sakjdhas<br />jdhasjkh</p>
+		<p>jdskddfdfd fgdg dhhd d ddfhkh</p>
+		<p>ddffkjjsdj ssfdsdfsfliil ilih</p>
+		<a href="http://microsoft.com">See Microsoft</a><br />
+		<h1 id="hdr2">About something</h1>
+		<img src="images/folder_download_4.png" style="width:200px" 
+				onmouseover="sayHello();" onmouseout="sayBello();" alt="pic" />
+		<audio id="player" src="sound/kuku.mp3"></audio>	
+		<div>
+			<img src="images/folder_download_4.png" style="width:200px" 
+				onmouseover="saySay();" alt="pic" />
+		</div>
+	</body>
+</html>
