@@ -51,13 +51,15 @@
         echo "<h2>INVALID LOGIN OR PASSWORD</h2>";
     }
     else {
-        echo  "<h2>HELLO, $user!</h2>";
+        echo  "<h2>HELLO, $user! Сейчас перенаправим на главную страницу...</h2>";
         $_SESSION["user"] = $user;   
     }
 
 
     mysqli_close($conn);
+
+    echo '<meta http-equiv="refresh" content = "3; url=index.html"/>';
 ?>
-<a href="index1.html">ДОМ</a><br />    
+   
     
 
